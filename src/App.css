@@ -1,6 +1,6 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
 
 body, html {
   margin: 0;
@@ -76,7 +76,7 @@ body, html {
   border: 2px solid white;
   border-radius: 12px;
   cursor: pointer;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Google Sans', sans-serif;
   font-weight: 700;
   color: white;
   margin-left: -100px;

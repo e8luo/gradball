@@ -58,12 +58,13 @@ function TicketsPage() {
             1. A suit<br />
             2. Your best dancing shoes<br />
             3. Your pretty smile<br /><br />
-            I have our tickets. See you there :)<br />
-            p.s. I love you!
+            I have our tickets. See you there :)
+            <br />
+            p.s. i love you!
           </p>
 
           {/* Tickets at bottom */}
-          <div className="tickets">
+          <div className="tickets show">
             <img src="/tickets.png" alt="Ticket" className="ticket" />
           </div>
         </div>
