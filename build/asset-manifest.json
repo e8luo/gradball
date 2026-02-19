@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/gradball/static/css/main.8b6f1b6f.css",
+    "main.js": "/gradball/static/js/main.2c401463.js",
+    "index.html": "/gradball/index.html",
+    "main.8b6f1b6f.css.map": "/gradball/static/css/main.8b6f1b6f.css.map",
+    "main.2c401463.js.map": "/gradball/static/js/main.2c401463.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b6f1b6f.css",
+    "static/js/main.2c401463.js"
+  ]
+}

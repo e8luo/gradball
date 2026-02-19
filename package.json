@@ -2,7 +2,7 @@
   "name": "gradball-invite-app",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://e8luo.github.io/gradball",
+  "homepage": "https://e8luo.github.io/gradball/",
   "dependencies": {
     "gh-pages": "^6.3.0",
     "react": "^18.2.0",
