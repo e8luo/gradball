@@ -1,0 +1,115 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Pacifico', cursive;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Container for everything */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Fullscreen shimmer background GIF */
+.background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;   /* behind everything */
+  pointer-events: none;
+}
+
+/* Disco ball + text */
+.gif-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.disco-gif {
+  width: 250px;
+  height: auto;
+}
+
+.title-text {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  /* Pink glowy text shadow */
+  text-shadow: 
+    0 0 5px #ff69b4,
+    0 0 15px #ff69b4,
+    0 0 10px #ff69b4;
+}
+
+/* Button container: center Yes button */
+.button-container {
+  position: relative; /* keeps Yes centered */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+/* Yes button stays centered */
+.yes-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 700;
+  color: white;
+  margin-left: -100px;
+  background-color: #0041C2;
+  box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+
+.yes-btn:hover {
+  transform: scale(1.1);
+
+  box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4;
+}
+
+/* No button moves freely across the viewport */
+.no-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+  font-weight: 700;
+  color: white;
+  background-color: #0041C2;
+  box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  position: fixed; /* relative to viewport */
+  top: 55%;        /* initial top */
+  left: 55%;       /* initial left, beside Yes button */
+  z-index: 3;
+}
+
+

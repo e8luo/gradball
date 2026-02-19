@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Google Sans', sans-serif;
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.tickets-container {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-left:70px;
+  margin-top: 100px;
+}
+
+/* Fullscreen shimmer GIF */
+.background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Titles */
+.title-text {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  text-shadow: 
+    0 0 5px #0041C2,
+    0 0 20px #0041C2,
+    0 0 30px #0041C2;
+}
+
+/* Cats flush together */
+.cat-gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cat-gif {
+  width: 400px;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.cat-gif-container img {
+  margin-left: -150px;
+  margin-right: -150px;
+}
+
+/* Open Instructions Button */
+button.open-btn {
+  background-color: #0041C2;
+  color: white;
+  border: none;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 20px;
+}
+
+button.open-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Popup background GIF */
+.popup-background-gif {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 5;   /* behind popup but above main page */
+  pointer-events: none; /* so clicks go to popup */
+  filter: brightness(0.6); /* optional, makes text pop more */
+}
+
+/* Popup container */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
+  z-index: 10;
+}
+
+/* Popup box */
+.popup {
+  position: relative;       /* needed for absolute positioning of close button */
+  width: 70%;               /* popup width */
+  max-width: 600px;
+  height: 75vh;             /* 75% of viewport height */
+  background-color: #0041C2; /* changed from semi-transparent black */
+  border-radius: 15px;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;      /* center all content horizontally */
+  z-index: 5;
+  color: #fff;
+  margin: auto;
+}
+
+/* Instruction text container */
+
+.popup-content {
+  width: 100%;
+  text-align: center;        /* center text and ticket */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* center vertically inside popup-content */
+  align-items: center;       /* center horizontally */
+  flex-grow: 1;
+  margin: 0;                 /* remove extra spacing */
+}
+
+.popup-text {
+  width: 90%;                 /* smaller width so text doesn't stretch full popup */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;    /* vertical centering inside popup-content */
+  align-items: flex-start;    /* left-align the text inside the container */
+  text-align: left;           /* ensure lines start from left */
+  margin: 0 auto;             /* horizontally center the container in popup */
+}
+
+/* Close button */
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-popup:hover {
+  color: #ff69b4;
+}
+
+/* Tickets container inside popup */
+.tickets {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.tickets img.ticket {
+  max-height: 60vh;          /* ensure it fits inside popup */
+  max-width: 90%;            /* scale down for small widths */
+  height: auto;
+  width: auto;
+  display: block;
+}
