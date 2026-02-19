@@ -65,7 +65,7 @@ function TicketsPage() {
 
           {/* Tickets at bottom */}
           <div className="tickets show">
-            <img src="/tickets.png" alt="Ticket" className="ticket" />
+            <img src={`${process.env.PUBLIC_URL}/tickets.png`} alt="Ticket" className="ticket" />
           </div>
         </div>
       </div>
