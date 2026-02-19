@@ -5,7 +5,7 @@ import Success from "./Success";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/gradball/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/yes" element={<Success />} />
