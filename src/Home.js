@@ -8,15 +8,28 @@ function Home() {
   const [position, setPosition] = useState({ top: 0, left: 0 });
 
   // Position the No button relative to Yes button
-  useLayoutEffect(() => {
+useEffect(() => {
+  const updatePosition = () => {
     if (yesRef.current) {
       const rect = yesRef.current.getBoundingClientRect();
-      setNoPosition({
-        top: rect.top,
-        left: rect.right + 20, // 20px gap
+      setPosition({
+        top: `${rect.top}px`,
+        left: `${rect.right + 20}px`,
       });
     }
-  }, []);
+  };
+
+  // Run after a short delay to ensure layout is done
+  const timer = setTimeout(updatePosition, 50);
+
+  // Also recalc on window resize
+  window.addEventListener("resize", updatePosition);
+
+  return () => {
+    clearTimeout(timer);
+    window.removeEventListener("resize", updatePosition);
+  };
+}, []);
 
   const moveButton = () => {
     const buttonWidth = 150; // approximate width of button
