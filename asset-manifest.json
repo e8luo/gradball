@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gradball/static/css/main.187fd387.css",
-    "main.js": "/gradball/static/js/main.c4b8e54b.js",
+    "main.js": "/gradball/static/js/main.ff60634c.js",
     "index.html": "/gradball/index.html",
     "main.187fd387.css.map": "/gradball/static/css/main.187fd387.css.map",
-    "main.c4b8e54b.js.map": "/gradball/static/js/main.c4b8e54b.js.map"
+    "main.ff60634c.js.map": "/gradball/static/js/main.ff60634c.js.map"
   },
   "entrypoints": [
     "static/css/main.187fd387.css",
-    "static/js/main.c4b8e54b.js"
+    "static/js/main.ff60634c.js"
   ]
 }
